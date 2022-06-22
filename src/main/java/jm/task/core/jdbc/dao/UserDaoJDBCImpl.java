@@ -25,11 +25,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao  {
         } catch (SQLException e) {
             System.out.println("Исключение в createUsersTable");
         }
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            System.out.println("Исключение в Connection close");;
-        }
+
     }
 
     public void dropUsersTable() {
@@ -39,11 +35,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao  {
         } catch (SQLException e) {
             System.out.println("Исключение в dropUsersTable");
         }
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            System.out.println("Исключение в Connection close");;
-        }
+
     }
 
     public void saveUser(String name, String lastName, byte age) {
@@ -57,11 +49,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao  {
         } catch (SQLException e) {
             System.out.println("Исключение в saveUser");
         }
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            System.out.println("Исключение в Connection close");;
-        }
+
     }
 
     public void removeUserById(long id) {
@@ -72,11 +60,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao  {
         } catch (SQLException e) {
             System.out.println("Исключение в removeUserById");;
         }
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            System.out.println("Исключение в Connection close");;
-        }
+
     }
 
     public List<User> getAllUsers() {
@@ -93,11 +77,7 @@ public class UserDaoJDBCImpl extends Util implements UserDao  {
         } catch (SQLException e) {
             System.out.println("Исключение в getAllUsers");
         }
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            System.out.println("Исключение в Connection close");;
-        }
+
         return users;
     }
 
@@ -108,10 +88,6 @@ public class UserDaoJDBCImpl extends Util implements UserDao  {
         } catch (SQLException e) {
             System.out.println("Исключение в cleanUsersTable");
         }
-        try {
-            conn.close();
-        } catch (SQLException e) {
-            System.out.println("Исключение в Connection close");;
-        }
+
     }
 }
